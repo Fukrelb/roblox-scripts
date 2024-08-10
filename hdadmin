@@ -1,0 +1,11 @@
+function GivePlayerRank(player, rank)
+    local player = game.Players:FindFirstChild(player)
+    if player then
+        player:Chat(":rank " .. player.Name .. " " .. rank)
+    else
+        error("Player not found")
+    end
+end
+
+-- Example call to give "HeadAdmin" rank
+GivePlayerRank("TheUniversePrime", "HeadAdmin")
